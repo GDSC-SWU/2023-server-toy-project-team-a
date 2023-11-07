@@ -24,8 +24,9 @@ public class PostRepositoryTest {
     UserRepository userRepository;
 
     @After  // 단위테스트가 끝날 때마다 수행되는 메서드 지정
-    public void cleanup() {
+    public void cleanup() { // 테스트가 끝난 후 생성한 데이터 모두 삭제
         postRepository.deleteAll();
+        userRepository.deleteAll();
     }
 
     @Test
