@@ -4,16 +4,20 @@ server:
 
 #jdbc
 spring:
+
   datasource:
     driver-class-name: oracle.jdbc.OracleDriver
     url: jdbc:oracle:thin:@localhost:1521:XE
-    username: swu
-    password: swu
+    username: hr
+    password: hr
 
   #jpa
   jpa:
     hibernate:
-      ddl-auto: create
+      #    ddl-auto: create #DROP 후 CREATE
+      #    ddl-auto: create-drop #DROP 후 CREATE 후 DML 사용 시 DROP
+      ddl-auto: create #Entity와 DB 스키마 비교 후 수정 사항 반영(컬럼 추가)
+      #    ddl-auto: validate #Entity와 DB 스키마 비교 후 불일치 시 오류
 
     #jpa format
     properties:
@@ -25,4 +29,3 @@ spring:
   output:
     ansi:
       enabled: always
-

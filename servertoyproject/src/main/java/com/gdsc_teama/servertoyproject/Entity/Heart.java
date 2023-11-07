@@ -1,4 +1,4 @@
-package com.gdsc_teama.servertoyproject.Entity;
+package com.gdsc_teama.servertoyproject.entity;
 
 
 import jakarta.persistence.*;

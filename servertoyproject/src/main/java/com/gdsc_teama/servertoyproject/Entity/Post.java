@@ -1,5 +1,4 @@
-package com.gdsc_teama.servertoyproject.Entity;
-
+package com.gdsc_teama.servertoyproject.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -30,15 +29,20 @@ public class Post {
     private String postContent;
 
     @CreationTimestamp
-    private LocalDateTime postRegisterDate;
+    private LocalDateTime postRegisterDates;
 
     @UpdateTimestamp
-    private LocalDateTime postUpdateDate;
+    private LocalDateTime postUpdateDates;
 
 
     @Builder
     public Post(User user, String postTitle, String postContent) {
         this.user = user;
+        this.postTitle = postTitle;
+        this.postContent = postContent;
+    }
+
+    public void update(String postTitle, String postContent) {
         this.postTitle = postTitle;
         this.postContent = postContent;
     }
