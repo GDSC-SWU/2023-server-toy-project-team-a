@@ -5,14 +5,30 @@ import com.gdsc_teama.servertoyproject.dto.post.PostSaveRequestDto;
 import com.gdsc_teama.servertoyproject.dto.post.PostUpdateRequestDto;
 import com.gdsc_teama.servertoyproject.service.PostService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
+//@Controller
+//@RequestMapping("/posts/*")
 public class PostController {
     private final PostService postService;
+
+//    @GetMapping("write")
+//    public void goToWriteForm(){
+//
+//    }
+//    @GetMapping("detail")
+//    public void goToDetail(){
+//
+//    }
+//    @GetMapping("list")
+//    public void goToList(){
+//
+//    }
 
     // Save Post
     @PostMapping("/api/v1/post")
