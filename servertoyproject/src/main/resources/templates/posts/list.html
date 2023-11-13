@@ -1,54 +1,80 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>게시판 메인</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
-    <link rel="stylesheet" href="/css/common.css"/>
-    <link rel="stylesheet" href="/css/list.css"/>
-    <link rel="icon" href="/images/favicon.ico"/>
+    <meta charset="UTF-8">
+    <title>게시글 목록</title>
+    <link rel="stylesheet" href="../../static/css/list.css">
+    <link rel="stylesheet" href="../../static/css/noticeList.css">
+
 </head>
 <body>
-<div class="container">
-    <header>
-        <!-- Include your header content here -->
-    </header>
-    <section>
-        <div class="content-wrap">
-            <div class="content-top">
-                <div>
-                    <div class="post-list">게시글 목록</div>
-                </div>
-                <div class="post-btn-wrap">
-                    <button type="button" class="btn btn-primary">게시글 등록</button>
+<!-- 페이지의 메인 부분 -->
+<div class="css-2b29tl">
+    <!-- 좌측 고객센터 메뉴창 및 게시글 부분 -->
+    <div class="css-luwwab eug5r811">
+        <!-- 좌측 고객센터 메뉴창 -->
+
+        <!-- 게시판 부분 -->
+        <div class="css-171zbec eug5r8l0">
+            <!-- 게시판 상단부 '공지사항' -->
+            <div class="css-j0lifa ed9qr673">
+                <div class="css-fhxb3m ed9qr672">
+                    <h2 class="css-1268zpe ed9qr671">게시글 목록</h2>
+                    <span class="css-a3vgo2 ed9qr670">GDSC 소식을 확인하세요.</span>
                 </div>
             </div>
-            <ul class="post-title content-ul ">
-                <div><p>게시글 제목 1</p></div>
-                <div><p>게시글 제목 2</p></div>
-                <div><p>게시글 제목 3</p></div>
-
-
+            <!-- 게시글 칼럼 구분 -->
+            <div class="css-e23nfx e16adls21">
+                <div width="50" class="css-mbsaqp e16adls20">번호</div>
+                <div class="css-1ym8aqm e16adls20">제목</div>
+                <div width="100" class="css-16tcewl e16adls20">작성자</div>
+                <div width="100" class="css-16tcewl e16adls20">작성일</div>
+            </div>
+            <!-- 게시글 목록 -->
+            <ul class="css-1fttcpj e1cfowvj5">
+                <!--                <c:forEach var="notificationboards" items="${notificationboards}">-->
+                <!--                    <li>-->
+                <!--                        <a href="${pageContext.request.contextPath}/noticeViewOk.notificationboard?notbId=${notificationboards.notbId}">-->
+                <!--                            <div class="css-14yglsw e1cfowvj4">-->
+                <!--                                <div class="css-3o6rrk e1cfowvj2">${notificationboards.notbId}</div>-->
+                <!--                                <div class="css-fzefrb e1cfowvj2">${notificationboards.notbTitle}</div>-->
+                <!--                                <div class="css-3d2kks e1cfowvj2">${notificationboards.memberName}</div>-->
+                <!--                                <div class="css-b1hszl e1cfowvj2"><c:out value="${fn:split(notificationboards.notbDate,' ')[0]}"/></div>-->
+                <!--                            </div>-->
+                <!--                        </a>-->
+                <!--                    </li>-->
+                <!--                </c:forEach>-->
+                <li>
+                    <a href="${pageContext.request.contextPath}/noticeViewOk.notificationboard?notbId=${notificationboards.notbId}">
+                        <div class="css-14yglsw e1cfowvj4">
+                            <div class="css-3o6rrk e1cfowvj2">1번</div>
+                            <div class="css-fzefrb e1cfowvj2">제목</div>
+                            <div class="css-3d2kks e1cfowvj2">작성자</div>
+                            <div class="css-b1hszl e1cfowvj2">일자</div>
+                        </div>
+                    </a>
+                </li>
             </ul>
-            <nav aria-label="Page navigation example">
-                <ul class="pagination">
-
-                    <!-- Pagination elements will be generated dynamically using JavaScript -->
-                </ul>
-            </nav>
+            <!-- 페이지 앞/뒤로 넘기기 버튼 -->
+            <!--            <div class="css-1kbzkwh e14yho7m0">-->
+            <!--                <div class="css-sxxs1g eytury60">-->
+            <!--                    <c:if test="${prev}">-->
+            <!--                        <button onclick="location.href='${pageContext.request.contextPath}/noticeListOk.notificationboard?page=${startPage - 1}'" class="css-rzcdhr e1hbwyso0">-->
+            <!--                            <div class="css-7qb0sc e1ilyb3p0">이전</div>-->
+            <!--                        </button>-->
+            <!--                    </c:if>-->
+            <!--                    <c:if test="${next}">-->
+            <!--                        <button onclick="location.href='${pageContext.request.contextPath}/noticeListOk.notificationboard?page=${endPage + 1}'" class="css-1jwilit e1pk9060">-->
+            <!--                            <div class="css-7qb0sc e1ilyb3p0">다음</div>-->
+            <!--                        </button>-->
+            <!--                    </c:if>-->
+            <!--                </div>-->
+            <!--            </div>-->
         </div>
-    </section>
+    </div>
 </div>
 </body>
-<script>
-    // Define JavaScript variables and data here (e.g., posts, id, page)
-</script>
-<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script src="/js/elapsedTime.js"></script>
-<script src="/js/list.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/noticeList.js"></script>
 </html>
