@@ -60,4 +60,17 @@ public class User {
     public void addRole(Role role) {
         roles.add(role);
     }
+
+    public void update(String userPhone, String userNickname) {
+        this.userPhone = userPhone;
+        this.userNickname = userNickname;
+    }
+
+    public void setUserStatus(boolean userStatus) {
+        this.userStatus = userStatus;
+    }
+
+    public void setUserUpdateDate(LocalDateTime userUpdateDate) {
+        this.userUpdateDate = userUpdateDate;
+    }
 }

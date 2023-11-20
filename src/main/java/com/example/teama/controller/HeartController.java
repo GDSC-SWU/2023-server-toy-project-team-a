@@ -13,7 +13,7 @@ public class HeartController {
 
     // 좋아요 추가
     // HeartService를 이용하여 좋아요 추가
-    @PutMapping("/{postid}")
+    @PutMapping("/{postId}")
     public String addHeart(@RequestBody HeartRequestDto requestDto) {
         heartService.addHeart(requestDto); //addHeart 메서드 호출하여 좋아요 추가
         return "Add Heart";
