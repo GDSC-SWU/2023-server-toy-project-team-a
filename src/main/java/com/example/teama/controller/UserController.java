@@ -170,18 +170,4 @@ public class UserController {
         User user = userService.findByEmail(loginUserDto.getUserEmail());
         return new ResponseEntity(user, HttpStatus.OK);
     }
-
-    // 내 정보 조회
-    @GetMapping("/api/v1/mypage")
-    public List<UserResponseDto> findAllDesc() {
-        return userService.findAllDesc(); //userService의 findAllDesc() 메서드를 호출하여 user 정보 불러오기
-    }
-
-    // 내 정보 수정
-    @PutMapping("/api/v1/mypage/{id}")
-    public Long update(@PathVariable Long id, @RequestBody UserUpdateRequestDto requestDto) {
-        return userService.update(id,requestDto); //사용자 id와 UserUpdateRequestDto를 이용하여 사용자 정보를 업데이트하고, 업데이트된 user의 id 반환
-    }
 }
-
-

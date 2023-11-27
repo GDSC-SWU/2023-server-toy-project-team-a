@@ -22,8 +22,8 @@ public class HeartController {
     // 좋아요 삭제
     // HeartService를 이용하여 좋아요 삭제
     @DeleteMapping("/{postId}")
-    public String removeHeart(@RequestBody HeartRequestDto requestDto) {
-        heartService.removeHeart(requestDto); //removeHeart 메서드 호출하여 좋아요 삭제
+    public String deleteHeart(@RequestBody HeartRequestDto requestDto) {
+        heartService.deleteHeart(requestDto); //removeHeart 메서드 호출하여 좋아요 삭제
         return "Delete Heart";
     }
 }

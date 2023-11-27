@@ -11,6 +11,4 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     Optional<User> findByUserEmail(String userEmail);
 
-    @Query("SELECT u FROM User u ORDER BY u.userRegisterDate DESC")
-    List<User> findAllDesc();
 }

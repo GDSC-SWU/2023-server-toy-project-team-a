@@ -9,11 +9,11 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class HeartRequestDto {
-    private Post postId;
-    private User userId;
+    private Long postId;
+    private Long userId;
 
     @Builder
-    public HeartRequestDto(User userId, Post postId){
+    public HeartRequestDto(Long userId, Long postId){
         this.postId = postId;
         this.userId = userId;
     }
